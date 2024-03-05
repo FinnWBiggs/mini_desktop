@@ -1,0 +1,119 @@
+mini_desktop/
+┣ configuration/
+┃ ┣ common/
+┃ ┃ ┣ dev_descr.h
+┃ ┃ ┣ hid_keyboard_leds.h
+┃ ┃ ┣ hid_keymap.h
+┃ ┃ ┣ hid_report_consumer_ctrl.h
+┃ ┃ ┣ hid_report_desc.c
+┃ ┃ ┣ hid_report_desc.h
+┃ ┃ ┣ hid_report_keyboard.h
+┃ ┃ ┣ hid_report_mouse.h
+┃ ┃ ┣ hid_report_system_ctrl.h
+┃ ┃ ┣ hid_report_user_config.h
+┃ ┃ ┣ led_state.h
+┃ ┃ ┣ port_state.h
+┃ ┃ ┗ settings_loader_def.h
+┃ ┣ nrf52840dk_nrf52840/
+┃ ┃ ┣ app.overlay
+┃ ┃ ┣ buttons_def.h
+┃ ┃ ┣ click_detector_def.h
+┃ ┃ ┣ hid_keyboard_leds_def.h
+┃ ┃ ┣ hid_keyboard_leds_def_keyboard.h
+┃ ┃ ┣ hid_keymap_def.h
+┃ ┃ ┣ hid_keymap_def_keyboard.h
+┃ ┃ ┣ led_state_def.h
+┃ ┃ ┣ pm_static.yml
+┃ ┃ ┣ pm_static_fast_pair.yml
+┃ ┃ ┣ pm_static_release.yml
+┃ ┃ ┣ port_state_def.h
+┃ ┃ ┗ prj.conf
+┃ ┗ xiao_ble_sense/
+┃   ┣ app.overlay
+┃   ┣ buttons_def.h
+┃   ┣ click_detector_def.h
+┃   ┣ hid_keyboard_leds_def.h
+┃   ┣ hid_keyboard_leds_def_keyboard.h
+┃   ┣ hid_keymap_def.h
+┃   ┣ hid_keymap_def_keyboard.h
+┃   ┣ led_state_def.h
+┃   ┣ pm_static.yml
+┃   ┣ pm_static_fast_pair.yml
+┃   ┣ pm_static_release.yml
+┃   ┣ port_state_def.h
+┃   ┗ prj.conf
+┣ dts/
+┃ ┗ bindings/
+┃   ┗ battery-charger.yaml
+┣ src/
+┃ ┣ events/
+┃ ┃ ┣ battery_event.c
+┃ ┃ ┣ battery_event.h
+┃ ┃ ┣ ble_dongle_peer_event.c
+┃ ┃ ┣ ble_dongle_peer_event.h
+┃ ┃ ┣ ble_event.c
+┃ ┃ ┣ ble_event.h
+┃ ┃ ┣ CMakeLists.txt
+┃ ┃ ┣ config_event.c
+┃ ┃ ┣ config_event.h
+┃ ┃ ┣ cpu_load_event.c
+┃ ┃ ┣ cpu_load_event.h
+┃ ┃ ┣ hids_event.c
+┃ ┃ ┣ hids_event.h
+┃ ┃ ┣ hid_event.c
+┃ ┃ ┣ hid_event.h
+┃ ┃ ┣ Kconfig
+┃ ┃ ┣ motion_event.c
+┃ ┃ ┣ motion_event.h
+┃ ┃ ┣ passkey_event.c
+┃ ┃ ┣ passkey_event.h
+┃ ┃ ┣ selector_event.c
+┃ ┃ ┣ selector_event.h
+┃ ┃ ┣ usb_event.c
+┃ ┃ ┣ usb_event.h
+┃ ┃ ┣ wheel_event.c
+┃ ┃ ┗ wheel_event.h
+┃ ┣ hw_interface/
+┃ ┃ ┣ board.c
+┃ ┃ ┣ CMakeLists.txt
+┃ ┃ ┣ Kconfig
+┃ ┃ ┗ Kconfig.board
+┃ ┣ modules/
+┃ ┃ ┣ bas.c
+┃ ┃ ┣ ble_bond.c
+┃ ┃ ┣ CMakeLists.txt
+┃ ┃ ┣ dev_descr.c
+┃ ┃ ┣ hids.c
+┃ ┃ ┣ hid_state.c
+┃ ┃ ┣ hid_state_pm.c
+┃ ┃ ┣ Kconfig
+┃ ┃ ┣ Kconfig.bas
+┃ ┃ ┣ Kconfig.ble_bond
+┃ ┃ ┣ Kconfig.caf_ble_adv.default
+┃ ┃ ┣ Kconfig.caf_ble_state.default
+┃ ┃ ┣ Kconfig.caf_power_manager.default
+┃ ┃ ┣ Kconfig.caf_settings_loader.default
+┃ ┃ ┣ Kconfig.dev_descr
+┃ ┃ ┣ Kconfig.hids
+┃ ┃ ┣ Kconfig.hid_forward
+┃ ┃ ┣ Kconfig.hid_state
+┃ ┃ ┣ Kconfig.led_state
+┃ ┃ ┗ led_state.c
+┃ ┣ util/
+┃ ┃ ┣ bt_le_adv_prov_uuid16.c
+┃ ┃ ┣ CMakeLists.txt
+┃ ┃ ┣ config_channel_transport.c
+┃ ┃ ┣ config_channel_transport.h
+┃ ┃ ┣ hwid.c
+┃ ┃ ┣ hwid.h
+┃ ┃ ┗ Kconfig
+┃ ┗ main.c
+┣ CMakeLists.txt
+┣ Kconfig
+┣ Kconfig.ble
+┣ Kconfig.debug
+┣ Kconfig.defaults
+┣ Kconfig.hid
+┣ nrf_desktop.ld
+┣ README.rst
+┗ sample.yaml
