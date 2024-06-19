@@ -1,0 +1,73 @@
+// To get started, press Ctrl+Space to bring up the completion menu and view the available nodes.
+
+// You can also use the buttons in the sidebar to perform actions on nodes.
+// Actions currently available include:
+
+// * Enabling / disabling the node
+// * Adding the bus to a bus
+// * Removing the node
+// * Connecting ADC channels
+
+// For more help, browse the DeviceTree documentation at https://docs.zephyrproject.org/latest/guides/dts/index.html
+// You can also visit the nRF DeviceTree extension documentation at https://nrfconnect.github.io/vscode-nrf-connect/devicetree/nrfdevicetree.html
+/ {
+    aliases {
+        // led0 = &led0;
+        sw0 = &button0;
+        sw1 = &button1;
+        sw1gnd = &button1gnd;
+    };
+
+    chosen {
+        zephyr,entropy = &rng_hci;
+    };
+
+    // aggregator for sensor manager sample
+    agg0: agg0 {
+		compatible = "caf,aggregator";
+		sensor_descr = "accel_sim_xyz";
+		buf_data_length = <240>;
+		sample_size = <3>;
+		status = "okay";
+	};
+
+    // sensor stub for sensor manager sample
+    sensor_stub: sensor_stub {
+		compatible = "nordic,sensor-stub";
+		generator = "sensor_stub_gen";
+		status = "okay";
+	};
+
+    // For Xiao Pinout: https://wiki.seeedstudio.com/XIAO_BLE/#hardware-overview
+    buttons {
+        compatible = "gpio-keys";
+        button0: button_0 {
+            gpios = <&gpio1 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) >;
+        };
+        button1: button_1 {
+            gpios = <&gpio0 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) >;
+        };
+
+        button1gnd: button_1_gnd{
+            gpios = <&gpio0 3 (GPIO_PULL_DOWN | NRF_GPIO_DRIVE_S1)>;
+        };
+    };
+
+    // P0.03 as GND
+    // P0.04 as (GPIO_ACTIVE_LOW | GPIO_PULL_UP);
+};
+&button1gnd {
+    gpios = <&gpio0 3 (GPIO_OPEN_SOURCE | GPIO_PULL_DOWN | NRF_GPIO_DRIVE_H0S1)>;
+};
+
+&button1gnd {
+    gpios = <&gpio0 3 (GPIO_OPEN_SOURCE | GPIO_PULL_DOWN)>;
+};
+
+&button1gnd {
+    gpios = <&gpio0 3 (GPIO_PULL_DOWN | NRF_GPIO_DRIVE_S1)>;
+};
+
+&button1gnd {
+    gpios = <&gpio0 3 (GPIO_OPEN_SOURCE | GPIO_PULL_DOWN | NRF_GPIO_DRIVE_H0S1)>;
+};
