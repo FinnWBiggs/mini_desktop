@@ -1,0 +1,257 @@
+ *  Executing task: nRF Connect: Build [pristine]: mini_desktop/build (active) 
+
+Building mini_desktop
+C:\WINDOWS\system32\cmd.exe /d /s /c "west build --build-dir c:/Users/finnb/Documents/auli/mini_desktop/build c:/Users/finnb/Documents/auli/mini_desktop --pristine --board nrf52840dk_nrf52840 --no-sysbuild -- -DNCS_TOOLCHAIN_VERSION=NONE -Dmcuboot_CONF_FILE=C:/Users/finnb/Documents/auli/mini_desktop/configuration/nrf52840dk_nrf52840/child_image/mcuboot/prj_mcuboot_smp.conf -Dmcuboot_DTC_OVERLAY_FILE=C:/ncs/v2.5.0/nrf/modules/mcuboot/usb.overlay;C:/Users/finnb/Documents/auli/mini_desktop/configuration/nrf52840dk_nrf52840/child_image/mcuboot.overlay -Dmcuboot_OVERLAY_CONFIG=C:/ncs/v2.5.0/nrf/subsys/partition_manager/partition_manager_enabled.conf -DCACHED_CONF_FILE=c:/Users/finnb/Documents/auli/mini_desktop/configuration/common/prj_mcuboot_smp.conf -DDTC_OVERLAY_FILE=c:/Users/finnb/Documents/auli/mini_desktop/configuration/nrf52840dk_nrf52840/app.overlay"
+
+-- west build: generating a build system
+Loading Zephyr default modules (Zephyr base).
+-- Application: C:/Users/finnb/Documents/auli/mini_desktop
+-- CMake version: 3.20.5
+-- Found Python3: C:/ncs/toolchains/c57af46cb7/opt/bin/python.exe (found suitable version "3.8.2", minimum required is "3.8") found components: Interpreter 
+-- Cache files will be written to: C:/ncs/v2.5.0/zephyr/.cache
+-- Zephyr version: 3.4.99 (C:/ncs/v2.5.0/zephyr)
+-- Found west (found suitable version "1.1.0", minimum required is "0.14.0")
+-- Board: nrf52840dk_nrf52840
+-- Found host-tools: zephyr 0.16.1 (C:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk)
+-- Found toolchain: zephyr 0.16.1 (C:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk)
+-- Found Dtc: C:/ncs/toolchains/c57af46cb7/opt/bin/dtc.exe (found suitable version "1.4.7", minimum required is "1.4.6") 
+-- Found BOARD.dts: C:/ncs/v2.5.0/zephyr/boards/arm/nrf52840dk_nrf52840/nrf52840dk_nrf52840.dts
+-- Found devicetree overlay: c:/Users/finnb/Documents/auli/mini_desktop/configuration/nrf52840dk_nrf52840/app.overlay
+unit address and first address in 'reg' (0x100000) don't match for /soc/qspi@40029000/mx25r6435f@0/partitions/partition@0
+-- Generated zephyr.dts: C:/Users/finnb/Documents/auli/mini_desktop/build/zephyr/zephyr.dts
+-- Generated devicetree_generated.h: C:/Users/finnb/Documents/auli/mini_desktop/build/zephyr/include/generated/devicetree_generated.h
+-- Including generated dts.cmake file: C:/Users/finnb/Documents/auli/mini_desktop/build/zephyr/dts.cmake
+
+warning: Experimental symbol DESKTOP_DFU_MCUMGR_ENABLE is enabled.
+
+Parsing C:/Users/finnb/Documents/auli/mini_desktop/Kconfig
+Loaded configuration 'C:/ncs/v2.5.0/zephyr/boards/arm/nrf52840dk_nrf52840/nrf52840dk_nrf52840_defconfig'
+Merged configuration 'c:/Users/finnb/Documents/auli/mini_desktop/configuration/common/prj_mcuboot_smp.conf'
+Configuration saved to 'C:/Users/finnb/Documents/auli/mini_desktop/build/zephyr/.config'
+Kconfig header saved to 'C:/Users/finnb/Documents/auli/mini_desktop/build/zephyr/include/generated/autoconf.h'
+-- Found GnuLd: c:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/bin/ld.bfd.exe (found version "2.38") 
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: C:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe
+CMake Warning at C:/ncs/v2.5.0/zephyr/subsys/usb/device/CMakeLists.txt:22 (message):
+  CONFIG_USB_DEVICE_VID has default value 0x2FE3.
+
+  This value is only for testing and MUST be configured for USB products.
+
+
+-- Found Python3: C:/ncs/toolchains/c57af46cb7/opt/bin/python.exe (found version "3.8.2") found components: Interpreter 
+
+=== child image mcuboot -  begin ===
+loading initial cache file C:/Users/finnb/Documents/auli/mini_desktop/build/mcuboot/child_image_preload.cmake
+Loading Zephyr default modules (Zephyr base).
+-- Application: C:/ncs/v2.5.0/bootloader/mcuboot/boot/zephyr
+-- CMake version: 3.20.5
+-- Found Python3: C:/ncs/toolchains/c57af46cb7/opt/bin/python.exe (found suitable version "3.8.2", minimum required is "3.8") found components: Interpreter 
+-- Cache files will be written to: C:/ncs/v2.5.0/zephyr/.cache
+-- Zephyr version: 3.4.99 (C:/ncs/v2.5.0/zephyr)
+-- Found west (found suitable version "1.1.0", minimum required is "0.14.0")
+-- Board: nrf52840dk_nrf52840
+-- Found host-tools: zephyr 0.16.1 (C:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk)
+-- Found toolchain: zephyr 0.16.1 (C:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk)
+-- Found Dtc: C:/ncs/toolchains/c57af46cb7/opt/bin/dtc.exe (found suitable version "1.4.7", minimum required is "1.4.6") 
+-- Found BOARD.dts: C:/ncs/v2.5.0/zephyr/boards/arm/nrf52840dk_nrf52840/nrf52840dk_nrf52840.dts
+-- Found devicetree overlay: C:/ncs/v2.5.0/nrf/modules/mcuboot/usb.overlay
+-- Found devicetree overlay: C:/Users/finnb/Documents/auli/mini_desktop/configuration/nrf52840dk_nrf52840/child_image/mcuboot.overlay
+-- Generated zephyr.dts: C:/Users/finnb/Documents/auli/mini_desktop/build/mcuboot/zephyr/zephyr.dts
+-- Generated devicetree_generated.h: C:/Users/finnb/Documents/auli/mini_desktop/build/mcuboot/zephyr/include/generated/devicetree_generated.h
+-- Including generated dts.cmake file: C:/Users/finnb/Documents/auli/mini_desktop/build/mcuboot/zephyr/dts.cmake
+Parsing C:/ncs/v2.5.0/bootloader/mcuboot/boot/zephyr/Kconfig
+Loaded configuration 'C:/ncs/v2.5.0/zephyr/boards/arm/nrf52840dk_nrf52840/nrf52840dk_nrf52840_defconfig'
+Merged configuration 'C:/Users/finnb/Documents/auli/mini_desktop/configuration/nrf52840dk_nrf52840/child_image/mcuboot/prj_mcuboot_smp.conf'
+Merged configuration 'C:/ncs/v2.5.0/nrf/subsys/partition_manager/partition_manager_enabled.conf'
+Merged configuration 'C:/Users/finnb/Documents/auli/mini_desktop/build/mcuboot/zephyr/misc/generated/extra_kconfig_options.conf'
+Configuration saved to 'C:/Users/finnb/Documents/auli/mini_desktop/build/mcuboot/zephyr/.config'
+Kconfig header saved to 'C:/Users/finnb/Documents/auli/mini_desktop/build/mcuboot/zephyr/include/generated/autoconf.h'
+-- Found GnuLd: c:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/bin/ld.bfd.exe (found version "2.38") 
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: C:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe
+CMake Warning at C:/ncs/v2.5.0/nrf/lib/flash_patch/CMakeLists.txt:8 (message):
+  
+
+        ----------------------------------------------------------
+        --- WARNING: To maintain the integrity of secure boot, ---
+        --- enable CONFIG_DISABLE_FLASH_PATCH in production.   ---
+        ----------------------------------------------------------
+
+
+MCUBoot bootloader key file: C:/Users/finnb/Documents/auli/mini_desktop/configuration/nrf52840dk_nrf52840/child_image/mcuboot/mcuboot_private.pem
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/finnb/Documents/auli/mini_desktop/build/mcuboot
+=== child image mcuboot -  end ===
+
+CMake Warning at C:/ncs/v2.5.0/zephyr/CMakeLists.txt:1958 (message):
+  __ASSERT() statements are globally ENABLED
+
+
+CMake Warning at C:/ncs/v2.5.0/nrf/cmake/partition_manager.cmake:79 (message):
+  
+
+          ---------------------------------------------------------------------
+          --- WARNING: Using a bootloader without pm_static.yml.            ---
+          --- There are cases where a deployed product can consist of       ---
+          --- multiple images, and only a subset of these images can be     ---
+          --- upgraded through a firmware update mechanism. In such cases,  ---
+          --- the upgradable images must have partitions that are static    ---
+          --- and are matching the partition map used by the bootloader     ---
+          --- programmed onto the device.                                   ---
+          ---------------------------------------------------------------------
+          
+
+Call Stack (most recent call first):
+  C:/ncs/v2.5.0/zephyr/cmake/modules/kernel.cmake:247 (include)
+  C:/ncs/v2.5.0/zephyr/cmake/modules/zephyr_default.cmake:138 (include)
+  C:/ncs/v2.5.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  C:/ncs/v2.5.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
+  CMakeLists.txt:14 (find_package)
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/finnb/Documents/auli/mini_desktop/build
+-- west build: building application
+[3/395] Generating include/generated/version.h
+-- Zephyr version: 3.4.99 (C:/ncs/v2.5.0/zephyr), build: v3.4.99-ncs1
+[3/283] Generating include/generated/version.h
+-- Zephyr version: 3.4.99 (C:/ncs/v2.5.0/zephyr), build: v3.4.99-ncs1
+[283/283] Linking C executable zephyr\zephyr.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:       45904 B        48 KB     93.39%
+             RAM:       25944 B       256 KB      9.90%
+        IDT_LIST:          0 GB         2 KB      0.00%
+[179/395] Building C object zephyr/drivers/disk/CMakeFiles/drivers__disk.dir/flashdisk.c.obj
+FAILED: zephyr/drivers/disk/CMakeFiles/drivers__disk.dir/flashdisk.c.obj 
+C:\ncs\toolchains\c57af46cb7\opt\zephyr-sdk\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe -DKERNEL -DNRF52840_XXAA -DUSE_PARTITION_MANAGER=1 -DZCBOR_ASSERTS -D__PROGRAM_START -D__ZEPHYR_SUPERVISOR__ -D__ZEPHYR__=1 -IC:/ncs/v2.5.0/nrf/drivers/mpsl/clock_control -IC:/ncs/v2.5.0/zephyr/include -Izephyr/include/generated -IC:/ncs/v2.5.0/zephyr/soc/arm/nordic_nrf/nrf52 -IC:/ncs/v2.5.0/zephyr/lib/posix/getopt/. -IC:/ncs/v2.5.0/zephyr/soc/arm/nordic_nrf/common/. -IC:/ncs/v2.5.0/zephyr/subsys/mgmt/mcumgr/util/include -IC:/ncs/v2.5.0/zephyr/subsys/mgmt/mcumgr/transport/include -IC:/ncs/v2.5.0/zephyr/subsys/usb/device -IC:/ncs/v2.5.0/zephyr/subsys/bluetooth -IC:/ncs/v2.5.0/zephyr/subsys/settings/include -IC:/ncs/v2.5.0/nrf/include -IC:/ncs/v2.5.0/nrf/lib/multithreading_lock/. -IC:/ncs/v2.5.0/nrf/subsys/bluetooth/controller/. -IC:/ncs/v2.5.0/nrf/subsys/app_event_manager/. -IC:/ncs/v2.5.0/nrf/subsys/app_event_manager_profiler_tracer/. -IC:/ncs/v2.5.0/zephyr/drivers/flash -IC:/ncs/v2.5.0/nrf/tests/include -IC:/ncs/v2.5.0/modules/hal/cmsis/CMSIS/Core/Include -IC:/ncs/v2.5.0/zephyr/modules/cmsis/. -IC:/ncs/v2.5.0/modules/hal/nordic/nrfx -IC:/ncs/v2.5.0/modules/hal/nordic/nrfx/drivers/include -IC:/ncs/v2.5.0/modules/hal/nordic/nrfx/mdk -IC:/ncs/v2.5.0/zephyr/modules/hal_nordic/nrfx/. -IC:/ncs/v2.5.0/modules/debug/segger/SEGGER -IC:/ncs/v2.5.0/modules/debug/segger/Config -IC:/ncs/v2.5.0/modules/crypto/tinycrypt/lib/include -IC:/ncs/v2.5.0/modules/lib/zcbor/include -IC:/ncs/v2.5.0/nrfxlib/mpsl/fem/common/include -IC:/ncs/v2.5.0/nrfxlib/mpsl/fem/nrf21540_gpio/include -IC:/ncs/v2.5.0/nrfxlib/mpsl/fem/nrf21540_gpio_spi/include -IC:/ncs/v2.5.0/nrfxlib/mpsl/fem/simple_gpio/include -IC:/ncs/v2.5.0/nrfxlib/mpsl/fem/include -IC:/ncs/v2.5.0/nrfxlib/mpsl/fem/include/protocol -IC:/ncs/v2.5.0/nrfxlib/mpsl/include -IC:/ncs/v2.5.0/nrfxlib/mpsl/include/protocol -IC:/Users/finnb/Documents/auli/mini_desktop/configuration/common -IC:/Users/finnb/Documents/auli/mini_desktop/configuration/nrf52840dk_nrf52840 -IC:/ncs/v2.5.0/nrfxlib/softdevice_controller/include -isystem C:/ncs/v2.5.0/zephyr/lib/libc/minimal/include -isystem c:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include -isystem c:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed -isystem C:/ncs/v2.5.0/nrfxlib/crypto/nrf_cc310_platform/include -Wshadow -fno-strict-aliasing -O2 -imacros C:/Users/finnb/Documents/auli/mini_desktop/build/zephyr/include/generated/autoconf.h -ffreestanding -fno-common -g -gdwarf-4 -fdiagnostics-color=always -mcpu=cortex-m4 -mthumb -mabi=aapcs -mfp16-format=ieee --sysroot=C:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk/arm-zephyr-eabi/arm-zephyr-eabi -imacros C:/ncs/v2.5.0/zephyr/include/zephyr/toolchain/zephyr_stdint.h -Wall -Wformat -Wformat-security -Wno-format-zero-length -Wno-pointer-sign -Wpointer-arith -Wexpansion-to-defined -Wno-unused-but-set-variable -Werror=implicit-int -fno-pic -fno-pie -fno-asynchronous-unwind-tables -fno-reorder-functions --param=min-pagesize=0 -fno-defer-pop -fmacro-prefix-map=C:/Users/finnb/Documents/auli/mini_desktop=CMAKE_SOURCE_DIR -fmacro-prefix-map=C:/ncs/v2.5.0/zephyr=ZEPHYR_BASE -fmacro-prefix-map=C:/ncs/v2.5.0=WEST_TOPDIR -ffunction-sections -fdata-sections -D_POSIX_THREADS -std=c99 -nostdinc -MD -MT zephyr/drivers/disk/CMakeFiles/drivers__disk.dir/flashdisk.c.obj -MF zephyr\drivers\disk\CMakeFiles\drivers__disk.dir\flashdisk.c.obj.d -o zephyr/drivers/disk/CMakeFiles/drivers__disk.dir/flashdisk.c.obj -c C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:484:1: error: return type defaults to 'int' [-Werror=implicit-int]
+  484 | PM_FOREACH_AFFILIATED_TO_disk(DEFINE_FLASHDISKS_CACHE)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c: In function 'PM_FOREACH_AFFILIATED_TO_disk':
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:523:30: error: storage class specified for parameter 'flash_disks'
+  523 | static struct flashdisk_data flash_disks[] = {
+      |                              ^~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:523:15: error: parameter 'flash_disks' is initialized
+  523 | static struct flashdisk_data flash_disks[] = {
+      |               ^~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:524:39: error: 'DEFINE_FLASHDISKS_DEVICE' undeclared (first use in this function)
+  524 |         PM_FOREACH_AFFILIATED_TO_disk(DEFINE_FLASHDISKS_DEVICE)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:524:39: note: each undeclared identifier is reported only once for each function it appears in
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:533:1: error: expected declaration specifiers before 'PM_FOREACH_AFFILIATED_TO_disk'
+  533 | PM_FOREACH_AFFILIATED_TO_disk(VERIFY_CACHE_SIZE_IS_NOT_ZERO_IF_NOT_READ_ONLY)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/ncs/v2.5.0/zephyr/include/zephyr/toolchain/gcc.h:92,
+                 from C:/ncs/v2.5.0/zephyr/include/zephyr/toolchain.h:50,
+                 from C:/ncs/v2.5.0/zephyr/lib/libc/minimal/include/string.h:13,
+                 from C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:8:
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:125:44: error: storage class specified for parameter '__init_disk_flash_init'
+  125 | #define Z_INIT_ENTRY_NAME(init_id) _CONCAT(__init_, init_id)
+      |                                            ^~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:192:17: note: in expansion of macro 'Z_INIT_ENTRY_NAME'
+  192 |                 Z_INIT_ENTRY_NAME(name) = {                                    \
+      |                 ^~~~~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:174:9: note: in expansion of macro 'SYS_INIT_NAMED'
+  174 |         SYS_INIT_NAMED(init_fn, init_fn, level, prio)
+      |         ^~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:563:1: note: in expansion of macro 'SYS_INIT'
+  563 | SYS_INIT(disk_flash_init, APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
+      | ^~~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:190:42: error: parameter '__init_disk_flash_init' is initialized
+  190 |         static const Z_DECL_ALIGN(struct init_entry)                           \
+      |                                          ^~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:174:9: note: in expansion of macro 'SYS_INIT_NAMED'
+  174 |         SYS_INIT_NAMED(init_fn, init_fn, level, prio)
+      |         ^~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:563:1: note: in expansion of macro 'SYS_INIT'
+  563 | SYS_INIT(disk_flash_init, APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
+      | ^~~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:125:44: error: section attribute not allowed for '__init_disk_flash_init'
+  125 | #define Z_INIT_ENTRY_NAME(init_id) _CONCAT(__init_, init_id)
+      |                                            ^~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:192:17: note: in expansion of macro 'Z_INIT_ENTRY_NAME'
+  192 |                 Z_INIT_ENTRY_NAME(name) = {                                    \
+      |                 ^~~~~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:174:9: note: in expansion of macro 'SYS_INIT_NAMED'
+  174 |         SYS_INIT_NAMED(init_fn, init_fn, level, prio)
+      |         ^~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:563:1: note: in expansion of macro 'SYS_INIT'
+  563 | SYS_INIT(disk_flash_init, APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
+      | ^~~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:190:42: warning: 'used' attribute ignored [-Wattributes]
+  190 |         static const Z_DECL_ALIGN(struct init_entry)                           \
+      |                                          ^~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:174:9: note: in expansion of macro 'SYS_INIT_NAMED'
+  174 |         SYS_INIT_NAMED(init_fn, init_fn, level, prio)
+      |         ^~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:563:1: note: in expansion of macro 'SYS_INIT'
+  563 | SYS_INIT(disk_flash_init, APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
+      | ^~~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:125:44: error: alignment may not be specified for '__init_disk_flash_init'
+  125 | #define Z_INIT_ENTRY_NAME(init_id) _CONCAT(__init_, init_id)
+      |                                            ^~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:192:17: note: in expansion of macro 'Z_INIT_ENTRY_NAME'
+  192 |                 Z_INIT_ENTRY_NAME(name) = {                                    \
+      |                 ^~~~~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:174:9: note: in expansion of macro 'SYS_INIT_NAMED'
+  174 |         SYS_INIT_NAMED(init_fn, init_fn, level, prio)
+      |         ^~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:563:1: note: in expansion of macro 'SYS_INIT'
+  563 | SYS_INIT(disk_flash_init, APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
+      | ^~~~~~~~
+In file included from C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:14:
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:563:10: error: 'disk_flash_init' undeclared (first use in this function)
+  563 | SYS_INIT(disk_flash_init, APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
+      |          ^~~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:193:45: note: in definition of macro 'SYS_INIT_NAMED'
+  193 |                         .init_fn = {.sys = (init_fn_)},                        \
+      |                                             ^~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:563:1: note: in expansion of macro 'SYS_INIT'
+  563 | SYS_INIT(disk_flash_init, APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
+      | ^~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:484:1: error: type of 'DEFINE_FLASHDISKS_CACHE' defaults to 'int' [-Werror=implicit-int]
+  484 | PM_FOREACH_AFFILIATED_TO_disk(DEFINE_FLASHDISKS_CACHE)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:125:44: error: declaration for parameter '__init_disk_flash_init' but no such parameter
+  125 | #define Z_INIT_ENTRY_NAME(init_id) _CONCAT(__init_, init_id)
+      |                                            ^~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:192:17: note: in expansion of macro 'Z_INIT_ENTRY_NAME'
+  192 |                 Z_INIT_ENTRY_NAME(name) = {                                    \
+      |                 ^~~~~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/include/zephyr/init.h:174:9: note: in expansion of macro 'SYS_INIT_NAMED'
+  174 |         SYS_INIT_NAMED(init_fn, init_fn, level, prio)
+      |         ^~~~~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:563:1: note: in expansion of macro 'SYS_INIT'
+  563 | SYS_INIT(disk_flash_init, APPLICATION, CONFIG_KERNEL_INIT_PRIORITY_DEFAULT);
+      | ^~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:523:30: error: declaration for parameter 'flash_disks' but no such parameter
+  523 | static struct flashdisk_data flash_disks[] = {
+      |                              ^~~~~~~~~~~
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:565: error: expected '{' at end of input
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:565: warning: control reaches end of non-void function [-Wreturn-type]
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c: At top level:
+C:/ncs/v2.5.0/zephyr/drivers/disk/flashdisk.c:415:37: warning: 'flash_disk_ops' defined but not used [-Wunused-const-variable=]
+  415 | static const struct disk_operations flash_disk_ops = {
+      |                                     ^~~~~~~~~~~~~~
+cc1.exe: some warnings being treated as errors
+[183/395] Building C object CMakeFiles/app.dir/src/modules/file_system.c.obj
+../src/modules/file_system.c: In function 'read_config':
+../src/modules/file_system.c:183:16: warning: format not a string literal and no format arguments [-Wformat-security]
+  183 |         printk(rstr);
+      |                ^~~~
+../src/modules/file_system.c: At top level:
+../src/modules/file_system.c:158:13: warning: 'read_config' defined but not used [-Wunused-function]
+  158 | static void read_config(void)
+      |             ^~~~~~~~~~~
+[199/395] Building C object zephyr/drivers/usb/device/CMakeFiles/drivers__usb__device.dir/usb_dc_nrfx.c.obj
+ninja: build stopped: subcommand failed.
+FATAL ERROR: command exited with status 1: 'C:\ncs\toolchains\c57af46cb7\opt\bin\cmake.EXE' --build 'c:\Users\finnb\Documents\auli\mini_desktop\build'
+
+ *  The terminal process terminated with exit code: 1. 
+ *  Terminal will be reused by tasks, press any key to close it.

@@ -1,0 +1,11 @@
+# Generated file that can be used to preload variant images
+set(BOARD "nrf52840dk_nrf52840" CACHE INTERNAL "NCS child image controlled")
+set(CACHED_CONF_FILE "c:/Users/finnb/Documents/auli/mini_desktop/configuration/common/prj_mcuboot_smp.conf" CACHE INTERNAL "NCS child image controlled")
+set(CONF_FILE_BUILD_TYPE "" CACHE INTERNAL "NCS child image controlled")
+set(DTC_OVERLAY_FILE "c:/Users/finnb/Documents/auli/mini_desktop/configuration/nrf52840dk_nrf52840/app.overlay" CACHE INTERNAL "NCS child image controlled")
+set(NCS_TOOLCHAIN_VERSION "NONE" CACHE INTERNAL "NCS child image controlled")
+set(WEST_PYTHON "C:/ncs/toolchains/c57af46cb7/opt/bin/python.exe" CACHE INTERNAL "NCS child image controlled")
+set(mcuboot_CONF_FILE "C:/Users/finnb/Documents/auli/mini_desktop/configuration/nrf52840dk_nrf52840/child_image/mcuboot/prj_mcuboot_smp.conf" CACHE INTERNAL "NCS child image controlled")
+set(mcuboot_DTC_OVERLAY_FILE "C:/ncs/v2.5.0/nrf/modules/mcuboot/usb.overlay;C:/Users/finnb/Documents/auli/mini_desktop/configuration/nrf52840dk_nrf52840/child_image/mcuboot.overlay" CACHE INTERNAL "NCS child image controlled")
+set(mcuboot_DTC_OVERLAY_FILE "C:/ncs/v2.5.0/nrf/modules/mcuboot/usb.overlay;C:/Users/finnb/Documents/auli/mini_desktop/configuration/nrf52840dk_nrf52840/child_image/mcuboot.overlay" CACHE INTERNAL "NCS child image controlled")
+set(mcuboot_OVERLAY_CONFIG "C:/ncs/v2.5.0/nrf/subsys/partition_manager/partition_manager_enabled.conf" CACHE INTERNAL "NCS child image controlled")
